@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Class</title>
+    <style>
+        body{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>hello my friends</h1>
+    <p>teste de DOM</p>
+    <P>Estou aprendendo a usar o <strong>DOM</strong> em javascript</P>
+    <div id="msg">Clique aqui</div>
+    <script>
+        var d = window.document.getElementById('msg')
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0]// selecionamento por marca TagName
+        window.document.write(p1.innerText)// pega o texte e replica novamente, da para fazer style.
+        window.document.write(p1.innerHTML)// puxa o comando completo do texto
+        window.document.write(window.document.charset)
+        window.document.write(window.navigator.appName)
+        window.document.write(window.document.URL)
+        corpo.style.background = 'black'
+        p1.style.color = 'blue'
+        d.style.background = 'green'
+        d.innerText = 'Estou aguardando...'// o comando do javascript sobrepoem o html
+    </script>
+</body>
+</html>

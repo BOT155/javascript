@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Class</title>
+    <style>
+        div#area{
+            background: rgba(105, 241, 105, 0.747);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>EVENTOS DOM modelo 2</h1>
+    <div id = "area">
+        interajaaaa....
+    </div>
+    <script>
+        var area = window.document.getElementById('area')
+        area.addEventListener('click', clicar)
+        area.addEventListener('mouseenter', entrar)
+        area.addEventListener('mouseout', sair)
+        
+        function clicar() {
+            area.innerText = 'você clicou motherfuck ahhahhah'
+            area.style.background = 'red'
+        }
+        function entrar(){
+            area.innerText = 'Você passou o mouse em cima'
+            area.style.background = 'blue'
+        }
+        function sair (){
+            area.innerText = 'Saiu!!'
+            area.style.background = 'purple'
+        }
+    </script>
+</body>
+</html>
