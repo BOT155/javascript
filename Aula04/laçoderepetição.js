@@ -14,5 +14,5 @@ console.log(`Tudo bem ${c}`)
 
 for (var c = 1; c <= 100; c++)
 {
-    console.log(`Tudo bem ${c}`)
+    console.log(`Tudo bem ${c}`) 
 }
