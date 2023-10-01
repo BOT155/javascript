@@ -13,15 +13,12 @@ article{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.466); /*para dar espalhamento, meio que uma sombra no section*/
 }
 section{
-
     background: white;
     border-radius: 10px; /*para arredondar as bordas do section*/
     padding: 15px; /* para encorpa o section*/
     width: 500px; /* para fixar a largura do section no px desejado */
     margin: auto; /* para centralizar o section usamos o margin auto */
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.466); /*para dar espalhamento, meio que uma sombra no section*/
-
-
 }
 header{
     color: white;

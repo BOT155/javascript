@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Susten - Registro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #4CAF50; /* Cor verde para a natureza */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 500px; /* Largura ajustada para 500px */
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>E-Susten</h1>
+        <h2>Registro</h2>
+        <form id="registerForm">
+            <input type="text" placeholder="Nome">
+            <input type="text" placeholder="Sobrenome">
+            <input type="tel" placeholder="Telefone">
+            <input type="text" placeholder="Endereço">
+            <input type="email" placeholder="E-mail">
+            <input type="password" placeholder="Senha">
+            <input type="password" placeholder="Confirme a senha">
+            <button type="button" id="registerBtn">Registrar</button>
+            <button type="button" id="clearBtn">Limpar</button>
+        </form>
+    </div>
+
+    <script>
+        // Função para lidar com o clique no botão de registro
+        document.getElementById("registerBtn").addEventListener("click", function () {
+            const nome = document.querySelector('input[placeholder="Nome"]').value;
+            const sobrenome = document.querySelector('input[placeholder="Sobrenome"]').value;
+            const telefone = document.querySelector('input[placeholder="Telefone"]').value;
+            const endereco = document.querySelector('input[placeholder="Endereço"]').value;
+            const email = document.querySelector('input[placeholder="E-mail"]').value;
+            const senha = document.querySelector('input[placeholder="Senha"]').value;
+            const confirmaSenha = document.querySelector('input[placeholder="Confirme a senha"]').value;
+
+            // Valide os campos e verifique a confirmação da senha (aqui você pode adicionar sua lógica de validação)
+            if (senha !== confirmaSenha) {
+                alert("As senhas não coincidem. Tente novamente.");
+                return;
+            }
+
+            // Envie os dados para o servidor PHP para inserção no banco de dados MySQL
+            // Você precisará criar um arquivo PHP para processar o formulário e inserir os dados no banco de dados.
+            // Use a função fetch() ou outra biblioteca para fazer a solicitação ao servidor.
+
+            // Redirecione para outra página após o registro bem-sucedido (substitua a URL abaixo)
+            window.location.href = "pagina_de_login.html";
+        });
+
+        // Função para limpar os campos de entrada
+        document.getElementById("clearBtn").addEventListener("click", function () {
+            const inputs = document.querySelectorAll('input');
+            inputs.forEach(input => (input.value = ''));
+        });
+    </script>
+</body>
+</html>

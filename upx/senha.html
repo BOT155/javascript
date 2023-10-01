@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Susten - Esqueci a Senha</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #4CAF50; /* Cor verde para a natureza */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 500px; /* Largura ajustada para 500px */
+        }
+
+        input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <section>
+    <div class="container">
+        <h1>E-Susten</h1>
+        <h2>Esqueci a Senha</h2>
+        <form id="forgotPasswordForm">
+            <input type="email" placeholder="E-mail">
+            <button type="button" id="sendPasswordBtn">Enviar</button>
+            <button type="button" id="backBtn">Voltar</button>
+        </form>
+    </div>
+</section>
+<footer>
+    <p>&copy; E-Susten</p>
+</footer>
+
+    <script>
+        // Função para lidar com o clique no botão "Enviar"
+        document.getElementById("sendPasswordBtn").addEventListener("click", function () {
+            const email = document.querySelector('input[placeholder="E-mail"]').value;
+
+            // Valide o campo de e-mail (aqui você pode adicionar sua lógica de validação)
+
+            // Envie o e-mail para o servidor PHP para processar o envio da nova senha
+            // Você precisará criar um arquivo PHP para processar o pedido de redefinição de senha e enviar um e-mail com uma nova senha.
+            // Use a função fetch() ou outra biblioteca para fazer a solicitação ao servidor.
+
+            // Redirecione para outra página após o envio bem-sucedido (substitua a URL abaixo)
+            window.location.href = "pagina_de_login.html";
+        });
+
+        // Função para lidar com o clique no botão "Voltar"
+        document.getElementById("backBtn").addEventListener("click", function () {
+            // Redirecione de volta para a página de login
+            window.location.href = "pagina_de_login.html";
+        });
+    </script>
+</body>
+</html>
