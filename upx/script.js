@@ -5,3 +5,10 @@ function login(){
     var hora = data.getTime() 
     img.innerHTML = 'Boa tarde, agora são'+hora+'aproveite o dia!'
 }
+function cancelar()
+{
+    
+}
+function entrar() {
+    
+}
