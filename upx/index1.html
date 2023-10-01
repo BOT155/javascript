@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Susten - Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #4CAF50; /* Cor verde para a natureza */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <h1>E-Susten</h1>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="text" placeholder="Nome de usuário" id="username">
+                <input type="password" placeholder="Senha" id="password"><br>
+                <button type="button" id="loginBtn">Entrar</button>
+                <button type="button" id="clearBtn">Limpar</button>
+            </form>
+            <p><a href="#">Esqueci minha senha</a></p>
+            <p><a href="#">Registre-se aqui</a></p>
+        </div>
+    </section>
+
+    <script>
+        // Função para lidar com o clique no botão de login
+        document.getElementById("loginBtn").addEventListener("click", function () {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Verifique as credenciais (aqui você pode adicionar sua lógica de autenticação)
+            if (username === "seu_usuario" && password === "sua_senha") {
+                // Redirecione para outra página (substitua a URL abaixo)
+                window.location.href = "pagina_de_destino.html";
+            } else {
+                alert("Credenciais inválidas. Tente novamente.");
+            }
+        });
+
+        // Função para limpar os campos de entrada
+        document.getElementById("clearBtn").addEventListener("click", function () {
+            document.getElementById("username").value = "";
+            document.getElementById("password").value = "";
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
