@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Susten - Compra</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>E-Susten</h1>
+    </header>
+    
+    <div class="container">
+        <div class="content">
+            <h2>Escolha os produtos que deseja comprar:</h2>
+            <div class="products">
+                <div class="product">
+                    <h3>Papel</h3>
+                    <input type="number" id="papelQuantity" placeholder="Quantidade (kg)">
+                </div>
+                <div class="product">
+                    <h3>Plástico</h3>
+                    <input type="number" id="plasticoQuantity" placeholder="Quantidade (kg)">
+                </div>
+                <div class="product">
+                    <h3>Óleo</h3>
+                    <input type="number" id="oleoQuantity" placeholder="Quantidade (litros)">
+                </div>
+                <div class="product">
+                    <h3>Alumínio</h3>
+                    <input type="number" id="aluminioQuantity" placeholder="Quantidade (kg)">
+                </div>
+            </div>
+            <button id="nextBtn">Próximo</button>
+        </div>
+    </div>
+
+    <footer>
+        &copy; E-Susten
+    </footer>
+
+    <script>
+        document.getElementById("nextBtn").addEventListener("click", function () {
+    // Obtenha as quantidades inseridas pelo usuário
+    const papelQuantity = document.getElementById("papelQuantity").value;
+    const plasticoQuantity = document.getElementById("plasticoQuantity").value;
+    const oleoQuantity = document.getElementById("oleoQuantity").value;
+    const aluminioQuantity = document.getElementById("aluminioQuantity").value;
+
+    // variaveis dos itens
+    const order = {
+        papel: papelQuantity,
+        plastico: plasticoQuantity,
+        oleo: oleoQuantity,
+        aluminio: aluminioQuantity
+    };
+
+    // Você pode enviar esse objeto para o servidor (PHP, por exemplo) para processamento e armazenamento no banco de dados MySQL.
+
+    // Redirecione o usuário para a próxima página (substitua a URL abaixo)
+    window.location.href = "pagina_de_confirmacao.html";
+});
+    </script>
+</body>
+</html>
