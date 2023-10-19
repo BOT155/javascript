@@ -1,4 +1,4 @@
-function login(){
+function login() {
     var img = window.document.getElementById('imagem')
     var msg = window.document.getElementById('d1')
     var data = new Date()
