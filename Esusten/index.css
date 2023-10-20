@@ -16,7 +16,7 @@
     background-color: aliceblue;
     border-radius: 15px;
     width: 960px;
-    height: 70%;
+    height: 80%;
     justify-content: space-between;
     align-items: center;
     position: relative;
@@ -26,8 +26,13 @@
     content: "";
     position: absolute;
     background-color: rgb(46, 250, 182);
-    width: 40%;
+    width: 50%;
     height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+
+    left: 60%;
 }
 .title
 {
@@ -45,7 +50,7 @@
 .first-content
 {
     display: flex;
-    
+    display: none;
 }
 .first-column
 {
@@ -72,10 +77,16 @@
     height: 35px;
     line-height: 35px;
     text-align: center;
+    color: #7f8c8d;
 }
-.item-social-media:not(:first-child)
+.link-social-midia
 {
-    margin-left: 20px;
+    margin-left: 10px;
+}
+.link-social-midia:hover .item-social-media{
+    background-color: blue;
+    color: #fff;
+    border-color: #070707;
 }
 .item-social-media a
 {
@@ -112,7 +123,13 @@
 .second-content
 {
     position: absolute;
-    display: none;
+    display: flex;
+}
+.second-content .first-column{
+    order: 2;
+}
+.second-content .second-column{
+    order: 1;
 }
 .btn
 {
@@ -133,9 +150,9 @@
     background-color: transparent;
     border: 1px solid #fff;
 }
-.contentbtn-primary:hover{
-    background-color: #d83030;
-    color: rgb(1, 99, 38);
+.content .btn-primary:hover{
+    background-color: #fff;
+    color: #58af9b;
 }
 .btn-second
 {
@@ -159,4 +176,8 @@
 {
     color: #7f8c8d;
     padding: 0 5px;
+}
+.password{
+    margin: 15px 0;
+    font-size: 14px;
 }
