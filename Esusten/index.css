@@ -75,7 +75,7 @@
 }
 .item-social-media:not(:first-child)
 {
-    margin-left: 10px;
+    margin-left: 20px;
 }
 .item-social-media a
 {
@@ -133,7 +133,7 @@
     background-color: transparent;
     border: 1px solid #fff;
 }
-.btn-primary:hover{
+.contentbtn-primary:hover{
     background-color: #d83030;
     color: rgb(1, 99, 38);
 }
