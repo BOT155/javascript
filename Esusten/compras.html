@@ -17,7 +17,7 @@
     <div class="nav-list">
       <ul>
         <li class="nav-item"><a href="file:///C:/Users/DELL/Documents/Estudos/javascript/Esusten/principal.html" class="nav-link">Inicio</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Eco</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Doe</a></li>
         <li class="nav-item"><a href="#" class="nav-link">Vendas</a></li>
         <li class="nav-item"><a href="file:///C:/Users/DELL/Documents/Estudos/javascript/Esusten/compras.html" class="nav-link">Compras</a></li>
         <li class="nav-item"><a href="file:///C:/Users/DELL/Documents/Estudos/javascript/Esusten/suporte.html" class="nav-link">Suporte</a></li>
@@ -44,12 +44,43 @@
       </div>
       </header>
           <div class="col-1">
-            <h2>Bem-vindo!</h2>
-          <p> O projeto "E-Susten" visa criar um site que atue como um guia prático para promover a sustentabilidade, oferecendo informações detalhadas sobre práticas sustentáveis, personalização de dicas, estímulo à ação, e a criação de uma comunidade engajada.</p>
+            <h1>Compras de produtos</h1>
+          </div>
+          <section>
+            <h3>Selecione:</h3>
+            <form class="form">
+              <input type="radio" name="productName" id="productName" required>
+              <label for="productName">Vidro</label>
+              <input type="radio" name="productName" id="productName" required>
+              <label for="productName">Plástico</label>
+              <input type="radio" name="productName" id="productName" required>
+              <label for="productName">Papel</label>
+              <input type="radio" name="productName" id="productName" required>
+              <label for="productName">Metal</label>
+              <input type="radio" name="productName" id="productName" required>
+              <label for="productName">Madeira</label>
+              <input type="radio" name="productName" id="productName" required>
+              <label for="productName">Óleo</label>
+            </form>
+            <h3>Quantidade:</h3>
+            <form>
+              <label for="quantity"></label>
+              <input type="number" name="quantity" id="quantity" required>
+            </form>
+            <h3>Total a Pagar:</h3>
+            <form>
+            <input type="text" id="total" name="total" readonly>
+            </form>
+            <form>
+            <button class="btn-compras" type="button" onclick="calculateTotal()">Calcular Total</button>
+            <button class="btn-compras" type="submit">Finalizar Compra</button>
+            </form>
+          </section>
+          <footer>
+            &copy; E-Susten
+          </footer>
         </div>
-        <footer>
-          &copy; E-Susten
-        </footer>
-        <script src="assets/js/principal.js"></script>
+        </div>
+        <script src="assets/js/script.js"></script>
 </body>
 </html>

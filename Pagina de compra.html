@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra de Produto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        section {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        h2 {
+            color: #4CAF50;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #FFA500;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #FF8C00;
+        }
+
+        footer {
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Compra de Produto</h1>
+    </header>
+
+    <section>
+        <h2>Detalhes do Produto</h2>
+        <form>
+            <label for="productName">Nome do Produto:</label>
+            <input type="text" id="productName" name="productName" required>
+
+            <label for="quantity">Quantidade:</label>
+            <input type="number" id="quantity" name="quantity" required>
+
+            <label for="total">Total a Pagar:</label>
+            <input type="text" id="total" name="total" readonly>
+
+            <button type="button" onclick="calculateTotal()">Calcular Total</button>
+            <button type="submit">Finalizar Compra</button>
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2023 Nome da Sua Empresa
+    </footer>
+
+    <script>
+        function calculateTotal() {
+            // Lógica para calcular o total com base na quantidade e preço do produto
+            var quantity = document.getElementById("quantity").value;
+            var totalPrice = 20; // Substitua pelo preço do seu produto
+            var total = quantity * totalPrice;
+
+            document.getElementById("total").value = "R$ " + total.toFixed(2);
+        }
+    </script>
+
+</body>
+</html>

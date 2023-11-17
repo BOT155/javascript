@@ -43,13 +43,24 @@
       </div>
       </div>
       </header>
-          <div class="col-1">
-            <h2>Bem-vindo!</h2>
-          <p> O projeto "E-Susten" visa criar um site que atue como um guia prático para promover a sustentabilidade, oferecendo informações detalhadas sobre práticas sustentáveis, personalização de dicas, estímulo à ação, e a criação de uma comunidade engajada.</p>
-        </div>
-        <footer>
-          &copy; E-Susten
-        </footer>
-        <script src="assets/js/principal.js"></script>
+<body>
+    <main>
+        <section class="chat-container">
+            <div class="chat-header">
+                <h2>Chat de Suporte</h2>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+            </div>
+            <div class="chat-input">
+                <input type="text" id="messageInput" placeholder="Digite sua mensagem...">
+                <button onclick="sendMessage()">Enviar</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+      &copy; E-Susten
+    </footer>
+
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
